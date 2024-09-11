@@ -35,6 +35,15 @@
 * choco --version
 
 ## Install Docker Desktop:
-* Download Docker Desktop from Docker's official website [[https://docs.docker.com/desktop/install/windows-install/]].
+* Download Docker Desktop from Docker's official website [https://docs.docker.com/desktop/install/windows-install/]
 * Install it and ensure Docker Desktop is running.
+
+## Enable Hyper-V (Optional): If you want to use Hyper-V as a virtualization driver, make sure it is enabled:
+
+* Open PowerShell as Administrator and run:
+ * Run this command: Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
+  * Reboot your machine after running the command.
+
+## Enable Virtualization in BIOS: If not already enabled, ensure Virtualization (VT-x/AMD-v) is enabled in your system BIOS.
+
 
