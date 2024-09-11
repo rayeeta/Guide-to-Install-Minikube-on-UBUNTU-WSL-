@@ -16,7 +16,34 @@
 #### minikube version
 
 ## Start the Minikube Cluster
-#### To start the Minikube cluster, run the following command:
+* To start the Minikube cluster, run the following command:
 
 #### minikube start
+
+* By default, Minikube will use Docker if it's installed. You can specify a different driver (e.g., Hyper-V or VirtualBox) using the --driver option:
+
+* For Docker (if Docker Desktop is installed):
+
+#### minikube start --driver=docker
+
+* For Hyper-V:
+
+#### minikube start --driver=hyperv
+
+* For VirtualBox:
+
+#### minikube start --driver=virtualbox
+
+## Check the Minikube Status: To verify the cluster is up and running:
+
+#### minikube status
+
+# The status should indicate that the Minikube cluster is running.
+
+
+
+
+
+
+
 
