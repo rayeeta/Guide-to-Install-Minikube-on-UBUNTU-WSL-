@@ -40,6 +40,36 @@
 
 # The status should indicate that the Minikube cluster is running.
 
+# Access Kubernetes with kubectl
+
+## Install kubectl: Minikube provides kubectl to interact with the Kubernetes cluster. You can either download kubectl manually or use Minikube’s built-in command:
+
+#### minikube kubectl -- get po -A
+
+* Alternatively, install kubectl via Chocolatey:
+
+#### choco install kubernetes-cli
+
+* Verify kubectl: Check if kubectl is properly installed by running:
+
+  #### kubectl version --client
+
+# Enable the Minikube Dashboard (Optional)
+
+#### minikube dashboard
+
+# This will open a browser window with the Minikube dashboard UI.
+
+# NOTE BENE:
+
+## Troubleshooting Tips
+* If you encounter issues starting Minikube due to virtualization conflicts, make sure only one virtualization platform is enabled (Docker, Hyper-V, or VirtualBox).
+* To check for Virtualization, you can use Task Manager > Performance > CPU (check Virtualization: enabled).
+* If Docker or Hyper-V conflicts with VirtualBox, you can disable Hyper-V via:
+
+#### bcdedit /set hypervisorlaunchtype off
+
+
 
 
 
