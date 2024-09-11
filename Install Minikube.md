@@ -60,7 +60,7 @@
 
 # This will open a browser window with the Minikube dashboard UI.
 
-# NOTE BENE:
+# NOTA BENE:
 
 ## Troubleshooting Tips
 * If you encounter issues starting Minikube due to virtualization conflicts, make sure only one virtualization platform is enabled (Docker, Hyper-V, or VirtualBox).
