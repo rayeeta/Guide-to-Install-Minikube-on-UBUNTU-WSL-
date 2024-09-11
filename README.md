@@ -1,8 +1,8 @@
-## Before installing Minikube on Windows, ensure the following prerequisites are met:
+# Before installing Minikube on Windows, ensure the following prerequisites are met:
 
-# Operating System: Windows 10/11 (64-bit) with the latest updates.
+## Operating System: Windows 10/11 (64-bit) with the latest updates.
 
-# Hardware Requirements:
+## Hardware Requirements:
 
 2 CPUs or more.
 2GB of free memory or more.
