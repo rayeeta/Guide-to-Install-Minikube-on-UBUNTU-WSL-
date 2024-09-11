@@ -11,4 +11,12 @@
 * Download the .exe file for Windows.
 * Add the minikube.exe file to your system PATH to use it from the command line.
 
-#### Verify Minikube Installation: After installation, open Command Prompt or PowerShell and verify Minikube is installed by checking its version:
+## Verify Minikube Installation: After installation, open Command Prompt or PowerShell and verify Minikube is installed by checking its version:
+
+#### minikube version
+
+## Start the Minikube Cluster
+#### To start the Minikube cluster, run the following command:
+
+#### minikube start
+
