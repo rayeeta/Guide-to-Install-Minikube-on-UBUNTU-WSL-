@@ -28,4 +28,13 @@
 
 ### Install Chocolatey Package Manager (Optional): If you don't have Chocolatey installed, you can install it to simplify package management:
 
-* Open PowerShell as an administrator and run:
+## Open PowerShell as an administrator and run:
+* Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+
+## Verify Chocolatey is installed:
+* choco --version
+
+## Install Docker Desktop:
+* Download Docker Desktop from Docker's official website [[https://docs.docker.com/desktop/install/windows-install/]].
+* Install it and ensure Docker Desktop is running.
+
