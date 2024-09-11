@@ -4,11 +4,11 @@
 
 ## Hardware Requirements:
 
-2 CPUs or more.
-2GB of free memory or more.
-20GB of free disk space.
-VT-x/AMD-v virtualization enabled in the BIOS.
-Software Requirements:
+* 2 CPUs or more.
+* 2GB of free memory or more.
+* 20GB of free disk space.
+* VT-x/AMD-v virtualization enabled in the BIOS.
+* Software Requirements:
 
 Container/Virtualization Software: Choose either Docker, Hyper-V, or VirtualBox as your driver.
 
