@@ -18,25 +18,25 @@
 ## Start the Minikube Cluster
 * To start the Minikube cluster, run the following command:
 
-#### minikube start
+### minikube start
 
 * By default, Minikube will use Docker if it's installed. You can specify a different driver (e.g., Hyper-V or VirtualBox) using the --driver option:
 
 * For Docker (if Docker Desktop is installed):
 
-#### minikube start --driver=docker
+### minikube start --driver=docker
 
 * For Hyper-V:
 
-#### minikube start --driver=hyperv
+### minikube start --driver=hyperv
 
 * For VirtualBox:
 
-#### minikube start --driver=virtualbox
+### minikube start --driver=virtualbox
 
 ## Check the Minikube Status: To verify the cluster is up and running:
 
-#### minikube status
+### minikube status
 
 # The status should indicate that the Minikube cluster is running.
 
@@ -44,19 +44,19 @@
 
 ## Install kubectl: Minikube provides kubectl to interact with the Kubernetes cluster. You can either download kubectl manually or use Minikube’s built-in command:
 
-#### minikube kubectl -- get po -A
+### minikube kubectl -- get po -A
 
 * Alternatively, install kubectl via Chocolatey:
 
-#### choco install kubernetes-cli
+### choco install kubernetes-cli
 
 * Verify kubectl: Check if kubectl is properly installed by running:
 
-  #### kubectl version --client
+  ### kubectl version --client
 
 # Enable the Minikube Dashboard (Optional)
 
-#### minikube dashboard
+### minikube dashboard
 
 # This will open a browser window with the Minikube dashboard UI.
 
@@ -67,7 +67,7 @@
 * To check for Virtualization, you can use Task Manager > Performance > CPU (check Virtualization: enabled).
 * If Docker or Hyper-V conflicts with VirtualBox, you can disable Hyper-V via:
 
-#### bcdedit /set hypervisorlaunchtype off
+### bcdedit /set hypervisorlaunchtype off
 
 
 
