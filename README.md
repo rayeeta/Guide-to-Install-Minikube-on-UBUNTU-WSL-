@@ -23,3 +23,9 @@
 * Install and set up WSL 2 to enable better performance and a more Linux-like experience on Windows.
 
 * Ensure the Virtual Machine Platform is enabled in Windows features.
+
+# Install Dependencies:
+
+### Install Chocolatey Package Manager (Optional): If you don't have Chocolatey installed, you can install it to simplify package management:
+
+* Open PowerShell as an administrator and run:
