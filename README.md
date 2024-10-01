@@ -2,6 +2,7 @@
 
 ## Operating System: Windows 10/11 (64-bit) with the latest updates.
 `highlighted text`
++ This line is highlighted in green
 ## Hardware Requirements:
 
 * 2 CPUs or more.
