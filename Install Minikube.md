@@ -53,6 +53,7 @@ This should return the installed Docker version.
 # Before installing Minikube, you need to ensure your system has the required dependencies. 
 ### Open your terminal and run the following commands:
 * sudo apt update
+* sudo apt install -y apt-transport-https curl docker.io
 
 ## Install kubectl (Kubernetes CLI)
 * curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl"
