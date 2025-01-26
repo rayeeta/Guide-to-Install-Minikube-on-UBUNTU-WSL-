@@ -24,10 +24,10 @@
 
 * Ensure the Virtual Machine Platform is enabled in Windows features.
 
-# Install Dependencies:
+## Install Dependencies:
 
 ## To install Minikube on an Ubuntu environment, follow these steps:
-# Install Dependencies
+## Install Dependencies
 * Before you install Minikube, please make sure your system has the required dependencies.
   Open your terminal UBUNTU(WSL) and run the following commands:
   
@@ -50,8 +50,8 @@ This should return the installed Docker version.
 ##################################################################################
 
 ## Install Dependencies
-# Before installing Minikube, you need to ensure your system has the required dependencies. 
-### Download Minikube, you can use curl to download the Minikube binary directly:
+## Before installing Minikube, you need to ensure your system has the required dependencies. 
+## Download Minikube, you can use curl to download the Minikube binary directly:
 
 * sudo apt update
 * curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
@@ -95,7 +95,7 @@ This will open the dashboard in your default web browser.
 * sudo mv kubectl /usr/local/bin/
 
 
-### If you run into any errors, delete the cluster with this command:
+## If you run into any errors, delete the cluster with this command:
 * minikube delete
 
 ## Restart minikube:
@@ -105,14 +105,14 @@ This will open the dashboard in your default web browser.
 * minikube status
 
 
-# NOTA BENE:
+## NOTA BENE:
 
 ## Troubleshooting Tips
 * If you encounter issues starting Minikube due to virtualization conflicts, make sure only one virtualization platform is enabled (Docker, Hyper-V, or VirtualBox).
 * To check for Virtualization, you can use Task Manager > Performance > CPU (check Virtualization: enabled).
 * If Docker or Hyper-V conflicts with VirtualBox, you can disable Hyper-V via:
 
-### bcdedit /set hypervisorlaunchtype off
+## bcdedit /set hypervisorlaunchtype off
 
 
 
