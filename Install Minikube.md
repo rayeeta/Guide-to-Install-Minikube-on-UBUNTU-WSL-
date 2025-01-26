@@ -64,6 +64,7 @@ This should return the installed Docker version.
 ## Verify Minikube Installation. Check that Minikube is installed correctly by running::
 
 * minikube version
+  
 You should see output showing the version of Minikube that you just installed.
 
 ## Start Minikube with Docker Driver. Now, you can start Minikube using Docker as the driver by running:
