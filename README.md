@@ -42,7 +42,7 @@
 ## Optional: Access Kubernetes Dashboard. To open the Kubernetes Dashboard, run:
 
 * minikube dashboard
-* 
+  
 ### This concise guide ensures you set up Minikube on your Linux machine using Docker as the driver to quickly get started with Kubernetes.
 
 
