@@ -1,4 +1,4 @@
-# Before installing Minikube on Windows, ensure the following prerequisites are met:
+# Before installing Minikube on UBUNTU (WSL), ensure the following prerequisites are met:
 
 ## Operating System: Windows 10/11 (64-bit) with the latest updates.
 ## Hardware Requirements:
@@ -25,24 +25,57 @@
 
 # Install Dependencies:
 
-### Install Chocolatey Package Manager (Optional): If you don't have Chocolatey installed, you can install it to simplify package management:
-
-## Open PowerShell as an administrator and run:
-* Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-
-## Verify Chocolatey is installed:
-* choco --version
-
+## To install Minikube on an Ubuntu environment, follow these steps:
+# Install Dependencies
+* Before you install Minikube, please make sure your system has the required dependencies.
+  Open your terminal UBUNTU(WSL) and run the following commands:
+  
 ## Install Docker Desktop:
 * Download Docker Desktop from Docker's official website [https://docs.docker.com/desktop/install/windows-install/]
 * Install it and ensure Docker Desktop is running.
 
-## Enable Hyper-V (Optional): If you want to use Hyper-V as a virtualization driver, make sure it is enabled:
+## Follow these steps to install docker desktop:
+*  Install Docker Engine:
 
-* Open PowerShell as Administrator and run:
- * Run this command: Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
-  * Reboot your machine after running the command.
+sudo apt install docker-ce docker-ce-cli containerd.io
+## Verify Docker installation:
+* sudo docker --version
+This should return the installed Docker version.
 
-## Enable Virtualization in BIOS: If not already enabled, ensure Virtualization (VT-x/AMD-v) is enabled in your system BIOS.
+## Start Docker and enable it to start on boot:
+* sudo systemctl start docker
+* sudo systemctl enable docker
+
+## Install kubectl (Kubernetes CLI)
+* curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl"
+chmod +x kubectl
+sudo mv kubectl /usr/local/bin/
+
+## Start Minikube
+minikube start --driver=docker
+
+### If you run into any errors, delete the cluster with this command:
+* minikube delete
+
+## Restart minikube:
+* minikube start --driver=docker
+
+## Check the minikube status:
+* minikube status
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
