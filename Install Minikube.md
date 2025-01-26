@@ -1,64 +1,69 @@
-# You can install Minikube using Chocolatey or direct download:
+# You can install Minikube in a UBUNTU(WSL) by following the below steps:
+# Before installing Minikube on UBUNTU (WSL), ensure the following prerequisites are met:
 
-## Using Chocolatey: If you have Chocolatey installed, run the following command in an elevated
-* PowerShell (run as administrator):
+## Operating System: Windows 10/11 (64-bit) with the latest updates.
+## Hardware Requirements:
+
+* 2 CPUs or more.
+* 2GB of free memory or more.
+* 20GB of free disk space.
+* VT-x/AMD-v virtualization enabled in the BIOS.
+* Software Requirements:
+
+* Container/Virtualization Software: Choose either Docker, Hyper-V, or VirtualBox as your driver.
+
+* Docker Desktop: If you have Docker Desktop installed, it will work as the container runtime for Minikube.
+
+* Hyper-V: Ensure Hyper-V is enabled if you want to use it.
+
+* VirtualBox: Alternatively, you can use VirtualBox.
+
+* Windows Subsystem for Linux (WSL 2): (Optional but recommended)
+
+* Install and set up WSL 2 to enable better performance and a more Linux-like experience on Windows.
+
+* Ensure the Virtual Machine Platform is enabled in Windows features.
+
+# Install Dependencies:
+
+## To install Minikube on an Ubuntu environment, follow these steps:
+# Install Dependencies
+* Before you install Minikube, please make sure your system has the required dependencies.
+  Open your terminal UBUNTU(WSL) and run the following commands:
   
-  ### choco install minikube
+## Install Docker Desktop:
+* Download Docker Desktop from Docker's official website [https://docs.docker.com/desktop/install/windows-install/]
+* Install it and ensure Docker Desktop is running.
 
-## Direct Download: Alternatively, download the Minikube installer from the official Minikube Releases page below.
-[https://minikube.sigs.k8s.io/docs/start/?arch=%2Fwindows%2Fx86-64%2Fstable%2F.exe+download]
+## Follow these steps to install docker desktop:
+*  Install Docker Engine:
 
-* Download the .exe file for Windows.
-* Add the minikube.exe file to your system PATH to use it from the command line.
+sudo apt install docker-ce docker-ce-cli containerd.io
+## Verify Docker installation:
+* sudo docker --version
+This should return the installed Docker version.
 
-## Verify Minikube Installation: After installation, open Command Prompt or PowerShell and verify Minikube is installed by checking its version:
+## Start Docker and enable it to start on boot:
+* sudo systemctl start docker
+* sudo systemctl enable docker
 
-### minikube version
+## Install kubectl (Kubernetes CLI)
+* curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl"
+chmod +x kubectl
+sudo mv kubectl /usr/local/bin/
 
-## Start the Minikube Cluster
-* To start the Minikube cluster, run the following command:
+## Start Minikube
+minikube start --driver=docker
 
-### minikube start
+### If you run into any errors, delete the cluster with this command:
+* minikube delete
 
-* By default, Minikube will use Docker if it's installed. You can specify a different driver (e.g., Hyper-V or VirtualBox) using the --driver option:
+## Restart minikube:
+* minikube start --driver=docker
 
-* For Docker (if Docker Desktop is installed):
+## Check the minikube status:
+* minikube status
 
-### minikube start --driver=docker
-
-* For Hyper-V:
-
-### minikube start --driver=hyperv
-
-* For VirtualBox:
-
-### minikube start --driver=virtualbox
-
-## Check the Minikube Status: To verify the cluster is up and running:
-
-### minikube status
-
-# The status should indicate that the Minikube cluster is running.
-
-# Access Kubernetes with kubectl
-
-## Install kubectl: Minikube provides kubectl to interact with the Kubernetes cluster. You can either download kubectl manually or use Minikube’s built-in command:
-
-### minikube kubectl -- get po -A
-
-* Alternatively, install kubectl via Chocolatey:
-
-### choco install kubernetes-cli
-
-* Verify kubectl: Check if kubectl is properly installed by running:
-
-  ### kubectl version --client
-
-# Enable the Minikube Dashboard (Optional)
-
-### minikube dashboard
-
-# This will open a browser window with the Minikube dashboard UI.
 
 # NOTA BENE:
 
