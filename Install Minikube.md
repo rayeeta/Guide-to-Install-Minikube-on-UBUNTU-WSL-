@@ -47,6 +47,18 @@ This should return the installed Docker version.
 * sudo systemctl start docker
 * sudo systemctl enable docker
 
+######################################################################################################################
+
+## Install Dependencies
+# Before installing Minikube, you need to ensure your system has the required dependencies. 
+# Open your terminal and run the following commands:
+
+* curl -Lo minikube https://storage.googleapis.com/minikube/releases/v1.35.0/minikube-linux-amd64
+  sudo chmod +x minikube
+  sudo mv minikube /usr/local/bin/
+  
+* minikube start --driver=docker
+
 ## Install kubectl (Kubernetes CLI)
 * curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl"
 chmod +x kubectl
