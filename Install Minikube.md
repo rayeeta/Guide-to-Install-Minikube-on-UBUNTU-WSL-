@@ -70,6 +70,7 @@ You should see output showing the version of Minikube that you just installed.
 ## Start Minikube with Docker Driver. Now, you can start Minikube using Docker as the driver by running:
 
 * minikube start --driver=docker
+  
 This command tells Minikube to start the Kubernetes cluster using Docker as the VM driver instead of VirtualBox.
 
 ## Enable Additional Features (if needed).Minikube allows you to enable additional features (e.g., storage provisioner, metrics-server). 
@@ -79,16 +80,21 @@ If you want to enable them, you can run:
 * minikube addons enable metrics-server
 
 ## Verify the Cluster is Running. After Minikube starts, check the status of your Kubernetes cluster:
+
 * kubectl cluster-info
 
 ## Access Kubernetes Dashboard (Optional). Minikube includes a Kubernetes dashboard that you can access with the following command:
+
 * minikube dashboard
+* 
 This will open the dashboard in your default web browser.
 
 ## Troubleshooting. If you run into any issues, you can view the Minikube logs for more detailed information:
+
 * minikube logs
  
 ## Install kubectl (Kubernetes CLI)
+
 * curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl"
  
 * chmod +x kubectl
@@ -97,12 +103,15 @@ This will open the dashboard in your default web browser.
 
 
 ## If you run into any errors, delete the cluster with this command:
+
 * minikube delete
 
 ## Restart minikube:
+
 * minikube start --driver=docker
 
 ## Check the minikube status:
+
 * minikube status
 
 
