@@ -1,5 +1,5 @@
-# You can install Minikube in a UBUNTU(WSL) by following the below steps:
-# Before installing Minikube on UBUNTU (WSL), ensure the following prerequisites are met:
+## You can install Minikube in a UBUNTU(WSL) by following the below steps:
+## Before installing Minikube on UBUNTU (WSL), ensure the following prerequisites are met:
 
 ## Operating System: Windows 10/11 (64-bit) with the latest updates.
 ## Hardware Requirements:
@@ -51,10 +51,42 @@ This should return the installed Docker version.
 
 ## Install Dependencies
 # Before installing Minikube, you need to ensure your system has the required dependencies. 
-### Open your terminal and run the following commands:
-* sudo apt update
-* sudo apt install -y apt-transport-https curl docker.io
+### Download Minikube, you can use curl to download the Minikube binary directly:
 
+* sudo apt update
+* curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+
+## Install Minikube. Next, move the downloaded binary to /usr/local/bin to make it executable.
+
+* sudo mv minikube-linux-amd64 /usr/local/bin/minikube
+* sudo chmod +x /usr/local/bin/minikube
+
+## Verify Minikube Installation. Check that Minikube is installed correctly by running::
+
+* minikube version
+You should see output showing the version of Minikube that you just installed.
+
+## Start Minikube with Docker Driver. Now, you can start Minikube using Docker as the driver by running:
+
+* minikube start --driver=docker
+This command tells Minikube to start the Kubernetes cluster using Docker as the VM driver instead of VirtualBox.
+
+## Enable Additional Features (if needed).Minikube allows you to enable additional features (e.g., storage provisioner, metrics-server). 
+If you want to enable them, you can run:
+
+* minikube addons enable storage-provisioner
+* minikube addons enable metrics-server
+
+## Verify the Cluster is Running. After Minikube starts, check the status of your Kubernetes cluster:
+* kubectl cluster-info
+
+## Access Kubernetes Dashboard (Optional). Minikube includes a Kubernetes dashboard that you can access with the following command:
+* minikube dashboard
+This will open the dashboard in your default web browser.
+
+## Troubleshooting. If you run into any issues, you can view the Minikube logs for more detailed information:
+* minikube logs
+ 
 ## Install kubectl (Kubernetes CLI)
 * curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl"
  
@@ -62,17 +94,6 @@ This should return the installed Docker version.
 
 * sudo mv kubectl /usr/local/bin/
 
-## Copy and paste the below link in your terminal:
- * curl -Lo minikube https://storage.googleapis.com/minikube/releases/v1.35.0/minikube-linux-amd64
-  
- * sudo chmod +x minikube
-  
- * sudo mv minikube /usr/local/bin/
-  
- * minikube start --driver=docker
-
-## Start Minikube
-minikube start --driver=docker
 
 ### If you run into any errors, delete the cluster with this command:
 * minikube delete
