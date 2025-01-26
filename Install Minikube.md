@@ -77,6 +77,7 @@ This command tells Minikube to start the Kubernetes cluster using Docker as the 
 If you want to enable them, you can run:
 
 * minikube addons enable storage-provisioner
+
 * minikube addons enable metrics-server
 
 ## Verify the Cluster is Running. After Minikube starts, check the status of your Kubernetes cluster:
@@ -86,7 +87,7 @@ If you want to enable them, you can run:
 ## Access Kubernetes Dashboard (Optional). Minikube includes a Kubernetes dashboard that you can access with the following command:
 
 * minikube dashboard
-* 
+  
 This will open the dashboard in your default web browser.
 
 ## Troubleshooting. If you run into any issues, you can view the Minikube logs for more detailed information:
