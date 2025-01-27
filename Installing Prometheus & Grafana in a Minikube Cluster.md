@@ -16,7 +16,8 @@ kubectl configured to communicate with the Minikube cluster.
 ## Add the Prometheus Helm Chart Repository:
 
 * helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
-helm repo update
+  
+* helm repo update
 
 ## Install Prometheus:
 
