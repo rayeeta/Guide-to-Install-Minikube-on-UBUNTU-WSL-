@@ -1,7 +1,7 @@
 ## You can install Minikube in a UBUNTU(WSL) by following the below steps:
 ## Before installing Minikube on UBUNTU (WSL), ensure the following prerequisites are met:
 
-## Operating System: Windows 10/11 (64-bit) with the latest updates.
+## Operating System: Mac OS/Windows 10/11 (64-bit) with the latest updates.
 ## Hardware Requirements:
 
 * 2 CPUs or more.
