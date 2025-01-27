@@ -47,7 +47,8 @@ kubectl configured to communicate with the Minikube cluster.
 ## Expose the Prometheus server for external access using Minikube:
 
 *  kubectl port-forward -n monitoring svc/prometheus-server 9090:80
-** Access Prometheus at http://localhost:9090.
+  
+*   Access Prometheus at http://localhost:9090.
 
 ###################################################################################
 
@@ -55,6 +56,7 @@ kubectl configured to communicate with the Minikube cluster.
 ## Expose the Grafana server for external access using Minikube:
 
 * kubectl port-forward -n monitoring svc/grafana 3000:80
+* 
 * Access Grafana at http://localhost:3000.
 
 Default credentials:
